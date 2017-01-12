@@ -34,10 +34,10 @@ var Main = React.createClass({
         // to actually mean the component itself and not the runQuery function.
       }.bind(this));
       
-       helpers.saveAdress({ adress: this.state.searchTerm, location: this.state.results })
-        .then(function() {
-          console.log("Posted to MongoDB");
-        });
+       helpers.saveAdress({ 
+        "adress": this.state.searchTerm 
+        
+      });
     }
   },
   // We use this function to allow children to update the parent with searchTerms.

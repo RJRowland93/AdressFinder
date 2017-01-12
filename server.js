@@ -61,7 +61,8 @@ app.get("/api", function(req, res) {
 // We will call this route the moment the "click" or "reset" button is pressed.
 app.post("/api", function(req, res) {
 
-	console.log(req.body);
+	console.log(req);
+	console.log("hello: " + req.body);
   var adress = req.body.adress;
   var location = req.body.location;
 
@@ -76,8 +77,9 @@ app.post("/api", function(req, res) {
       console.log(err);
     }
     else {
+    console.log(req.body);
       console.log("Saved location!");
-      res.send("Saved location!");
+      res.send(req.body);
     }
   });
 });
