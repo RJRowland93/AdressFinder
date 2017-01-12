@@ -12,6 +12,8 @@ var helpers = {
   // Also returns a promise object we can .then() off inside our Parent component
   // This method takes in an argument for what to post to the database
   saveAdress: function(AdressData) {
+  	console.log("sent post");
+  	console.log(AdressData);
     return axios.post("/api", AdressData);
   },
 

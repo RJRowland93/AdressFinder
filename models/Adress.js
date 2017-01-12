@@ -7,7 +7,6 @@ var Schema = mongoose.Schema;
 var AdressSchema = new Schema({
   location: {
     type: String,
-    required: true,
     date: {
   	type: Date,
   	default: Date.now()

@@ -61,13 +61,16 @@ app.get("/api", function(req, res) {
 // We will call this route the moment the "click" or "reset" button is pressed.
 app.post("/api", function(req, res) {
 
+	console.log(req.body);
   var adress = req.body.adress;
   var location = req.body.location;
 
   // Note how this route utilizes the findOneAndUpdate function to update the clickCount
   // { upsert: true } is an optional object we can pass into the findOneAndUpdate method
   // If included, Mongoose will create a new document matching the description if one is not found
-  Adress.save(function(err) {
+  var entry = new Adress(req.body);
+
+  entry.save(function(err) {
 
     if (err) {
       console.log(err);
