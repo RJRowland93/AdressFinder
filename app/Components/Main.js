@@ -33,6 +33,11 @@ var Main = React.createClass({
         // This code is necessary to bind the keyword "this" when we say this.setState
         // to actually mean the component itself and not the runQuery function.
       }.bind(this));
+      
+       helpers.saveAdress({ adress: this.state.searchTerm, location: this.state.results })
+        .then(function() {
+          console.log("Posted to MongoDB");
+        });
     }
   },
   // We use this function to allow children to update the parent with searchTerms.
