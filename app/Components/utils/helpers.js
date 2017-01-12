@@ -6,6 +6,14 @@ var geocodeAPI = "35e5548c618555b1a43eb4759d26b260";
 
 // Helper Functions (in this case the only one is runQuery)
 var helpers = {
+  getAdress: function() {
+    return axios.get("/api");
+  },
+  // Also returns a promise object we can .then() off inside our Parent component
+  // This method takes in an argument for what to post to the database
+  saveAdress: function(AdressData) {
+    return axios.post("/api", AdressData);
+  },
 
   runQuery: function(location) {
 
