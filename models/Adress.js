@@ -19,7 +19,7 @@ var AdressSchema = new Schema({
 });
 
 // Create the Model
-var Adress = mongoose.model("Click", ClickSchema);
+var Adress = mongoose.model("Adress", AdressSchema);
 
 // Export it for use elsewhere
 module.exports = Adress;
