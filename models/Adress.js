@@ -5,12 +5,17 @@ var Schema = mongoose.Schema;
 
 // Create a Schema for capturing clicks. We'll use clickID to update the same clickCounter
 var AdressSchema = new Schema({
-  clicks: {
-    type: Number
-  },
-  clickID: {
+  location: {
+    type: String,
+    required: true,
+    date: {
+  	type: Date,
+  	default: Date.now()
+	  } 
+	},
+  adress: {
     type: String
-  }
+  },
 });
 
 // Create the Model
